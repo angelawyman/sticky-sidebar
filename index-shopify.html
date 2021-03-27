@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>her name is</title>
+<link rel="stylesheet" href="media-queries.css">
+<style> \
+
+/* CHECK LIST
+☐ rems, ems, vh, convert units
+☐ validate code 
+☐ add browser prefixes 
+☐ work around for IE 11 
+☐ mobile first? */
+
+/*========================
+  CSS Reset 
+=========================*/
+* {
+    box-sizing: border-box;
+}
+html, body, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.clearfix {
+    clear:both;
+}
+/*========================
+  LAYOUT
+  
+  Sticky sidebar
+  https://jsfiddle.net/vuongngocanh189/z7pgvyLL/
+  
+  Fixed sidebar
+  https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+=========================*/
+h2 {
+    text-align:center;
+}
+
+.container {
+   background-color:wheat;
+   width: 100%;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+/*    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);*/
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+/*    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);*/
+}
+
+.header {
+    height:200px;
+    background: #555;
+    line-height: 200px;
+}
+
+/* Sidebar */
+
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+}
+.sticky-sidebar {
+    height: 600px;
+/*    height: auto;*/
+    overflow:hidden;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    padding: 30px 0;
+    background: blanchedalmond;
+    top: 10px;
+    bottom: auto;
+    z-index:10;
+}
+.sticky-sidebar p {
+  text-align:center;
+  padding: 6px 8px 6px 16px;
+  font-size: 20px;
+}
+/*.sticky-sidebar img {
+  max-width:100%;
+  margin-top:-100px;
+}*/
+
+.sticky-sidebar .sleeve img {
+/*  width: auto;
+height:auto;
+  max-height: 100%;*/
+
+  position:relative;
+/*  top: 90%;*/
+/*  margin-top:10vh;*/
+/*  max-height:20vh;*/
+}
+
+/*.break-free {
+  top: 50%;
+  margin-top: -50vh;
+  margin-bottom: -50vh;
+  max-height: 100vh;
+  position: relative;
+  right: 50%;
+  height: 100vh;
+}*/
+
+/* Gallery */
+
+.col-8 {
+    flex: 0 0 auto;
+    width: 66.6666666667%;
+}
+.gallery {
+      display:flex;
+      flex-wrap: wrap;
+      padding: 0 10px;
+}
+.gallery img {
+    max-width:100%;
+    margin-bottom:20px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+  <div class="header" style="background-color:cornsilk">
+    <div class="container">
+      <h2> header</h2>
+  </div>
+</div>
+
+<section style="background-color:bisque">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix"></div>
+          <div class="sticky-sidebar col-4">
+            <div class="sleeve">
+              <img src= "logo-200x.png" alt="logo">
+            </div>
+            <p>This is sticky sidebar content text lorem ipsum dolor sit Kevin drumstick jerky chislic, turducken spare ribs leberkas landjaeger short loin frankfurter bresaola boudin swine pork shankle.</p>
+          </div><!-- close sidebar -->
+          <div class="gallery col-8 ">
+              <img src="http://placekitten.com/900/500">
+              <img src="http://placekitten.com/900/400">
+              <img src="http://placekitten.com/800/400">
+              <img src="http://placekitten.com/900/400">
+              <img src="http://placekitten.com/900/300">
+              <img src="http://placekitten.com/900/400">
+              <img src="http://placekitten.com/900/400">
+              <img src="http://placekitten.com/900/400">
+              <img src="http://placekitten.com/900/400">
+              <img src="http://placekitten.com/900/400">
+              <img src="http://placekitten.com/900/400">
+              <img src="http://placekitten.com/900/400">
+          </div> <!--close grid -->
+        </div><!--close row -->
+      </div><!--close container -->
+</section>
+
+<section>
+    <div class="container">
+       <div class="row">
+            <div class="col-md-12 ">
+                <h2>New Section content goes here...</h2>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
